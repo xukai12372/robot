@@ -1,0 +1,18 @@
+// Data Pipeline
+digraph {
+	rankdir=TB size="8,5"
+	A [label="数据采集
+(Collect Data)"]
+	B [label="数据标注
+(Annotate with CVAT)" color=lightblue style=filled]
+	C [label="模型训练
+(Train with YOLOv8-Pose)" color=lightgreen style=filled]
+	D [label="模型部署
+(Deploy Model)"]
+	E [label="机械臂控制
+(Control Interface)" color=pink style=filled]
+	A -> B [label="采集的数据"]
+	B -> C [label="标注的数据"]
+	C -> D [label="训练好的模型"]
+	D -> E [label="推理结果"]
+}

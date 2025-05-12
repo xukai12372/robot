@@ -1,0 +1,17 @@
+# 修改为你的实际路径
+train: D:/Robotic_Arm_Keypoint_Tracking_YoloV8-Pose-main/train/images
+val: D:/Robotic_Arm_Keypoint_Tracking_YoloV8-Pose-main/val/images
+# test: /path/to/RobotArm/test/images  # 可选
+
+# 类别数量
+nc: 1
+
+# 类别名称
+names:
+  0: joints
+
+# 关键点配置
+kpt_shape: [3, 3]  # [关键点数量, 维度(3表示x,y,visible)]
+flip_idx: []  # 无对称关系
+augment:
+  fliplr: 0.0  # 必须禁用翻转！
